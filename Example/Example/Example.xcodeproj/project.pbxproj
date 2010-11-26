@@ -22,7 +22,6 @@
 		78C0A46D12A05D2F0049B7C9 /* DDTTYLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C0A46912A05D2F0049B7C9 /* DDTTYLogger.m */; };
 		78C0A47212A05D440049B7C9 /* LoggerClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C0A47012A05D440049B7C9 /* LoggerClient.m */; };
 		78C0A47612A05DA20049B7C9 /* PSDDFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C0A47512A05DA20049B7C9 /* PSDDFormatter.m */; };
-		78C0A49412A05E4E0049B7C9 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C0A49312A05E4E0049B7C9 /* CFNetwork.framework */; };
 		78C0A49A12A05E560049B7C9 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C0A49912A05E560049B7C9 /* CFNetwork.framework */; };
 		78C0A4AB12A05E620049B7C9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C0A4AA12A05E620049B7C9 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
@@ -55,7 +54,6 @@
 		78C0A47112A05D440049B7C9 /* LoggerCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoggerCommon.h; path = "../../NSLogger/Client Logger/LoggerCommon.h"; sourceTree = SOURCE_ROOT; };
 		78C0A47412A05DA20049B7C9 /* PSDDFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSDDFormatter.h; sourceTree = "<group>"; };
 		78C0A47512A05DA20049B7C9 /* PSDDFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSDDFormatter.m; sourceTree = "<group>"; };
-		78C0A49312A05E4E0049B7C9 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		78C0A49912A05E560049B7C9 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		78C0A4AA12A05E620049B7C9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		8D1107310486CEB800E47090 /* Example-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Example-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
@@ -69,7 +67,6 @@
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
-				78C0A49412A05E4E0049B7C9 /* CFNetwork.framework in Frameworks */,
 				78C0A49A12A05E560049B7C9 /* CFNetwork.framework in Frameworks */,
 				78C0A4AB12A05E620049B7C9 /* SystemConfiguration.framework in Frameworks */,
 			);

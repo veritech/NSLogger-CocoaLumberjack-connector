@@ -62,7 +62,7 @@
     BOOL removed = [[NSFileManager defaultManager] removeItemAtPath:storeURL.path
                                                               error:&err];
     if (!removed || err) {
-      DDLogError(@"could not delete store at URL '%@' (%@)", storeURL, [err localizedDescription]);
+      DDLogError(@"could not delete store at URL %@ (%@)", storeURL, [err localizedDescription]);
     }
   }
 
