@@ -29,7 +29,7 @@ static Logger *_DDNSLogger_logger = nil;
 	if (!initialized)
 	{
 		initialized = YES;
-		
+
 		sharedInstance = [[DDNSLoggerLogger alloc] init];
 	}
 }
@@ -46,22 +46,14 @@ static Logger *_DDNSLogger_logger = nil;
 		[self release];
 		return nil;
 	}
-	
+
 	if ((self = [super init]))
 	{
     // create and remember the logger instance
     _DDNSLogger_logger = LoggerInit();
-    
-    // get configuration
-    const BOOL logToConsole = NO;
-    const BOOL bufferLocallyUntilConnection = YES;
-    const BOOL browseBonjour = YES;
-    const BOOL browseOnlyLocalDomains = YES;
-    
+
     // configure the logger
-    LoggerSetOptions(_DDNSLogger_logger, logToConsole, bufferLocallyUntilConnection, browseBonjour, browseOnlyLocalDomains);
-    
-    // activate the logger
+    LoggerSetOptions(_DDNSLogger_logger, kLoggerOption_BufferLogsUntilConnection | kLoggerOption_BrowseBonjour | kLoggerOption_BrowseOnlyLocalDomain );
     LoggerStart(_DDNSLogger_logger);
 	}
 	return self;
@@ -70,7 +62,7 @@ static Logger *_DDNSLogger_logger = nil;
 - (void)logMessage:(DDLogMessage *)logMessage
 {
 	NSString *logMsg = logMessage->logMsg;
-	
+
 	if (formatter)
 	{
     // formatting is supported but not encouraged!
@@ -79,7 +71,7 @@ static Logger *_DDNSLogger_logger = nil;
     // apply own mini-formatter here!
     logMsg = [NSString stringWithFormat:@"%@%d: %@", [logMessage methodName], logMessage->lineNumber, logMsg];
   }
-	
+
 	if (logMsg)
 	{
     int nsloggerLogLevel;
@@ -92,8 +84,8 @@ static Logger *_DDNSLogger_logger = nil;
 			case LOG_FLAG_INFO  : nsloggerLogLevel = 2; break;
 			default : nsloggerLogLevel = 3; break;
 		}
-    
-    LogMessage([logMessage fileName], nsloggerLogLevel, logMsg);  
+
+    LogMessage([logMessage fileName], nsloggerLogLevel, logMsg);
 	}
 }
 
